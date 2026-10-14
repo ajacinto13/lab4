@@ -1,21 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 4: Interactive Logic</title>
-    <url rel="stylesheet" href="style.css">
+    <title>Interactive Logic</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Choose Your Own Adventure</h1>
-    <div id ="part1">
-        <button id="end1" onclick="buttonEnd1()">Choice 1</button>
+
+    <h1>Welcome to the Cat Café!</h1>
+
+    <p id="story">A fluffy cat approaches your table! How will you respond?</p>
+
+    <img id="cat" src="images/cat-laying.png" alt="A cute cat">
+
+    <div id="part1">
+        <button onclick="buttonEnd1()">Pet the Cat</button>
+        <button onclick="buttonEnd2()">Give a Treat</button>
+        <button onclick="revealNext()">Leave It Alone</button>
     </div>
 
-    <div id="part2" style="display:none;">
-        <button id="end2" onclick="buttonEnd2()">Choice 2</button>
+    <div id="part2" style="display: none;">
+        <p id="followup">The cat is looking at you curiously!</p>
+        <button onclick="resetCafe()">Play Again ↻</button>
     </div>
-    
+
     <script src="script.js"></script>
+
 </body>
 </html>
